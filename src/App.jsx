@@ -24,21 +24,13 @@ function App() {
   }
 
   return (
-    <>
-      <div className="container">
-        <h1>dev lub previsão do tempo</h1>
-        <input
-          ref={inputRef}
-          type="text"
-          placeholder="Digite o nome da cidade"
-        />
-        <button onClick={searchCity}>Buscar</button>
-        {weather && <WeatherInformations weather={weather} />}
-        {weather5Days && (
-          <WeatherInformations5Days weather5Days={weather5Days} />
-        )}
-      </div>
-    </>
+    <div className="container">
+      <h1>dev lub previsão do tempo</h1>
+      <input ref={inputRef} type="text" placeholder="Digite o nome da cidade" />
+      <button onClick={searchCity}>Buscar</button>
+      {weather && <WeatherInformations weather={weather} />}
+      {weather5Days && <WeatherInformations5Days weather5Days={weather5Days} />}
+    </div>
   );
 }
 
